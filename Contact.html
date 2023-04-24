@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact</title>
+	<link rel="stylesheet" href="Style1.css">
+	<link rel="stylesheet" href="Style2.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<script type="text/javascript">
+		function validate()
+			{
+				var name = f1.txtName.value;
+				if (name == "")
+				{
+					alert("Name is Required");
+					f1.txtName.focus();
+					return false;
+				}
+				var Email = f1.txtEmail.value;
+				if (Email == ""){
+				
+					alert("Email is Required");
+					f1.txtEmail.focus();
+					return false;
+				}
+				atpos = Email.indexOf("@");
+				dotpos = Email.lastIndexOf(".");
+				if(atpos < 1 || (dotpos - atpos < 2))
+				{
+					alert("Invalid Email Entered");
+					f1.txtEmail.focus();
+					return false;
+				}
+			}	
+	</script>
+
+
+
+
+</head>
+<body>
+
+    <div class="header">
+	<div class="container">
+		<div class="navbar">
+		<div class="logo">
+			<a href="Index.html"><img src="images/logo.png" width="300px" height="200px"></a>
+		</div>
+		<nav>
+			<ul><
+				<li class="active"><a href="Index.html">Home</a></li>
+				<li><a href="Product.html">Product</a>
+
+
+				<li><a href="About.html">About Us</a></li>
+				<li><a href="">Contact Us</a></li>
+			</ul>
+		</nav>
+		<a href="Cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+	</div>
+	</div>
+	</div>
+
+
+<!----------contact---------->
+<div class="wrapper">
+	<h2>Contact US</h2>
+	<div id="error_msg"></div>
+
+	<form name="f1" onsubmit="return validate()">
+	<!---<form id="myform" onsubmit="return validation()">--->
+		<div class="input_field">
+			<input type="text" placeholder="Name" name="txtName">
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Subject" id="subject">
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Phone" id="phone">
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Email" name="txtEmail">
+		</div>
+		<div class="input_field">
+			<textarea id="message" placeholder="Message"></textarea>
+		</div> 
+		<div class="btn1 ">
+			<input type="submit">
+		</div>
+	</form>
+</div>
+
+<!----------footer---------->
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Download Our App</h3>
+				<p>Download App for Android and Ios Mobile Phone.</p>
+				<div class="app-logo">
+					<img src="images/appstore.jpeg">
+					<img src="images/playstore.png">
+				</div>
+			</div>
+			
+			
+
+			<div class="footer-col-2">
+				<h3>Follow Us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>Youtube</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<p class="Copyright">Copyright : Agrata Bhattarai</p>
+	</div>
+</div>
+
+ 
+
+</body>
+</html>
